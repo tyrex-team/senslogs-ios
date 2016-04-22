@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="12Z-L5-Piq">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="LIc-jl-Va8"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record sensors data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztR-Dj-MqS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6H7-2a-S8M">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Es-b5b">
+                                        <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="9" width="20" height="20"/>
+                                        </variation>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="waiting for exporting data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-cC-lZQ">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="44" y="9" width="196" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="PCZ-Es-b5b"/>
+                                        <exclude reference="zSe-cC-lZQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="PCZ-Es-b5b"/>
+                                        <include reference="zSe-cC-lZQ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="12Z-L5-Piq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0UI-Tq-CVm"/>
+                            <constraint firstItem="ztR-Dj-MqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4du-kN-qdF"/>
+                            <constraint firstItem="12Z-L5-Piq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7eZ-nB-wRa"/>
+                            <constraint firstItem="6H7-2a-S8M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Hyr-4g-4fg"/>
+                            <constraint firstItem="6H7-2a-S8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLj-ej-ai4"/>
+                            <constraint firstItem="6H7-2a-S8M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="542" id="ZdR-es-lR5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6H7-2a-S8M" secondAttribute="bottom" constant="20" id="aHZ-tb-jCN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6H7-2a-S8M" secondAttribute="trailing" constant="60" id="nNK-d6-Ph4"/>
+                            <constraint firstItem="12Z-L5-Piq" firstAttribute="top" secondItem="ztR-Dj-MqS" secondAttribute="bottom" constant="15" id="sJ8-zD-sQ3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="12Z-L5-Piq"/>
+                                <exclude reference="ztR-Dj-MqS"/>
+                                <exclude reference="6H7-2a-S8M"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="aHZ-tb-jCN"/>
+                                <exclude reference="0UI-Tq-CVm"/>
+                                <exclude reference="7eZ-nB-wRa"/>
+                                <exclude reference="sJ8-zD-sQ3"/>
+                                <exclude reference="4du-kN-qdF"/>
+                                <exclude reference="Hyr-4g-4fg"/>
+                                <exclude reference="VLj-ej-ai4"/>
+                                <exclude reference="ZdR-es-lR5"/>
+                                <exclude reference="nNK-d6-Ph4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="12Z-L5-Piq"/>
+                                <include reference="ztR-Dj-MqS"/>
+                                <include reference="6H7-2a-S8M"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="aHZ-tb-jCN"/>
+                                <include reference="0UI-Tq-CVm"/>
+                                <include reference="7eZ-nB-wRa"/>
+                                <include reference="sJ8-zD-sQ3"/>
+                                <include reference="4du-kN-qdF"/>
+                                <include reference="Hyr-4g-4fg"/>
+                                <include reference="VLj-ej-ai4"/>
+                                <include reference="ZdR-es-lR5"/>
+                                <include reference="nNK-d6-Ph4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="toggleButton" destination="12Z-L5-Piq" id="pbM-8P-DwS"/>
+                        <outlet property="waitingView" destination="6H7-2a-S8M" id="VpY-TT-iXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="537"/>
+        </scene>
+    </scenes>
+</document>
